@@ -1,0 +1,19 @@
+/* ? start code for style.css*/
+
+*
+{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+@font-face {
+     font-family: Samim-FD;
+     src: url(Font/Samim-FD.woff);
+}
+
+body
+{
+     font-family: Samin-FD;
+}
+
