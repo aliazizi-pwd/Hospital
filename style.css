@@ -7,6 +7,13 @@
      box-sizing: border-box;
 }
 
+:root
+{
+     --color-1 : #fff;
+     --color-2 : #000;
+     --color-3 : #ff0000;
+}
+
 @font-face {
      font-family: Samim-FD;
      src: url(Font/Samim-FD.woff);
@@ -14,6 +21,512 @@
 
 body
 {
-     font-family: Samin-FD;
+     font-family: Samim-FD;
+}
+
+/* todo menu bar */
+
+.container-main
+{
+     width: 100%;
+     height: 625px;
+     background-image: linear-gradient(rgba(13 , 70 , 83 , 0.78) , rgba(13 , 70 , 83 , 0.78)), 
+     url(image/bg-banner.jpg);
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+
+.menu-main
+{
+     width: 100%;
+     max-width: 1100px;
+     margin: 0 auto;
+     display: flex;
+     flex-direction: row-reverse;
+     align-items: center;
+     justify-content: space-between;
+}
+
+
+.logo
+{
+     width: 110px;
+     margin-top: 10px;
+}
+
+.logo:hover
+{
+     opacity: 80%;
+}
+
+.nav-bar ul 
+{
+     list-style: none;
+     display: flex;
+}
+
+.nav-bar ul li
+{
+     padding: 10px 12px;
+}
+
+.nav-bar ul li a
+{
+     color: var(--color-1);
+     font-size: 16px;
+     text-decoration: none;
+     transition: all 3s ease-in;
+}
+
+.nav-bar ul li a:hover
+{
+     border-bottom: 5px solid var(--color-1);
+     animation: leftt 1s infinite;
+} 
+
+@keyframes leftt
+{
+     0%
+     {
+          border-bottom: 2px solid var(--color-1);
+     }
+     50%
+     {
+          border-bottom: 2px solid var(--color-3);
+
+     }
+     100%
+     {
+          border-bottom:  2px solid var(--color-1);
+          opacity: 0.9;
+     }
+}
+
+
+.nav-bar
+{
+   position: fixed;  
+   width: 100%;
+   height: 70px;
+   background-image: linear-gradient(rgba(3, 41, 49, 0.78) , rgba(3, 30, 36, 0.78));
+   z-index: 50;
+}    
+
+
+/* todo main banner */
+
+.header
+{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding-top: 200px;
+}
+
+.header img
+{
+     margin-bottom: 10px;
+}
+
+.header h1
+{
+     margin-bottom: 15px;
+     color: var(--color-1);
+}
+
+.header p
+{
+     font-size: 13px;
+     margin-bottom: 20px;
+     color: var(--color-1);
+}
+
+.header .btn
+{
+     text-decoration: none;
+     font-size: 13px;
+     font-weight: 600;
+     text-align: center;
+     color: var(--color-1);
+     background-color: #04d4d4;
+     display: block;
+     width: 100px;
+     height: 40px;
+     padding-top: 10px;
+}
+
+.header .btn:hover
+{
+     border-bottom: 10px solid var(--color-3);
+     animation: leftt 1s infinite;
+     transition: all 3s ease-in;
+}
+
+.item-loop
+{
+     width: 15px;
+     height: 15px;
+     border-radius: 100%;
+     background-color: #fff;
+     display: inline-block;
+     margin-top: 10px;
+}
+
+/* todo servis  */
+
+.my-container
+{
+     display: grid;
+     grid-template-columns: repeat(3 , 340px);
+     grid-template-rows: repeat(3 , 223px);
+     gap: 40px;
+     align-items: center;
+     justify-content: center;
+}
+
+.item
+{
+     position: relative;
+     top: 200px;
+}
+
+.item i
+{
+     color: #1395c9;
+}
+
+.item p
+{
+     color: #6d6b6b;
+     text-align: justify;
+     font-size: 15px;
+     font-weight: 500;
+     margin: 10px 0 0 10px;
+}
+
+.item h4
+{
+     margin: 15px 0 0 0;
+}
+
+.item3
+{
+     font-size: 26px;
+}
+
+hr
+{
+     width: 50px;
+     margin: 10px 0;
+     border-bottom: 2px solid orange; 
+}
+
+/* todo table and cards */
+
+.container-card
+{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     
+}
+
+.item-card
+{
+     width: 370px;
+     height: 220px;
+     background: #1395c9;
+     border-radius: 5px;
+     margin: 1px;
+}
+
+.item-card table
+{
+     border: 2px solid var(--color-1);
+     color: var(--color-1);
+}
+
+.item-card td
+{
+     border: 1px solid var(--color-1);
+     padding: 2px;
+}
+
+.item-card table
+{
+     position: relative;
+     top: 20px;
+     right: 50px;
+}
+
+.item-card h3
+{
+     color: var(--color-1);
+     padding: 10px 10px;
+}
+
+.item-card p
+{
+     color: var(--color-1);
+     padding: 10px 15px;
+     text-align: justify;
+     font-size: 15px;
+}
+
+.item-card > .btn
+{
+     font-size: 17px;
+     color: #fff;
+     display: block;
+     width: 100px;
+     height: 30px;
+     border-radius: 0px;
+     background: #04d4d4;
+     text-align: center;
+     text-decoration: none;
+     margin-right: 15px;
+     transition: all 0.5s ease-in;
+     margin-top: 10px;
+}
+
+.item-card > .btn:hover
+{
+     background-color: #fff;
+     color: #000;
+     border-bottom: 2px solid red;
+}
+
+
+/* todo New Section And Boxtext */
+
+
+.boxtext
+{
+     display: grid;
+     grid-template-columns: repeat(2 , 450px);
+     grid-template-rows: repeat(3 , 230px);
+     gap: 20px;
+     width: 100%;
+     max-width: 1100px;
+     margin: 0 auto;
+     position: relative;
+     top: 100px;
+}
+
+.item-boxtext i
+{
+     position: relative;
+     right: 450px;
+     color: #1395c9;
+}
+
+.item-boxtext h2 
+{
+     margin: 18px 0;
+     color: #1395c9;
+}
+
+.item-boxtext p
+{
+     margin: 10px 5px;
+     color: #6d6b6b;
+     text-align: justify;
+}
+
+.item-end
+{
+    position: relative;
+    top: 50px;
+    right: 100px;
+}
+
+
+/* todo -------------------------------------About us -------------------------------------------- */
+
+
+.about
+{
+     width: 100%;
+     height: 600px;
+     margin-top: 50px;
+     background-color: #fff;
+}
+
+.about h2
+{
+    padding: 20px 130px;
+}
+
+.container-about
+{
+     width: 100%;
+     max-width: 1100px;
+     margin: 0 auto;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+}
+
+.item-about
+{
+     border: 1px solid #e9e7e7;
+     padding: 10px;
+     margin: 12px;
+}
+
+.item-about img
+{
+     width: 240px;
+     height: 300px;
+}    
+
+.item-about h4
+{
+     margin: 12px 5px;
+     font-weight: 900;
+     font-size: 18px;
+     color: #1395c9;
+}
+
+.item-about p
+{
+     margin: 5px 5px;
+     color: #000;
+}
+
+.item-about i
+{
+     margin: 10px 5px;
+     color: #1395c9
+}
+
+.item-about label
+{
+     color: #000;
+     font-weight: 900;
+}
+
+.item-about img:hover
+{
+     animation: imganim 2s; 
+     animation-direction: alternate;
+}
+
+@keyframes imganim
+{
+     0%
+     {
+          opacity: 0.7;
+          border-bottom: 2px solid #e28585;
+     }
+     50%
+     {
+          opacity: 0.8;
+          border-bottom: 5px solid #cc4e4e;
+     }
+     100%
+     {
+          opacity: 0.9;
+          border-bottom: 10px solid #db0000;
+     }
+}
+
+hr
+{
+     width: 50px;
+     border-bottom: 2px solid orange; 
+     position: relative;
+     bottom: 15px;
+     right: 120px;
+}
+
+
+
+/* ----------------------------------------------Container-test-------------------------------------- */
+
+
+.Container-test
+{
+     position: relative;
+     top: 100px;
+     width: 100%;
+     background-color: #eeeeee;
+}
+
+.on-page
+{
+     width: 100%;
+     max-width: 1100px;
+     margin: 0 auto;
+}
+
+.log-test h2
+{
+     padding: 20px 0px;
+}
+
+hr
+{
+     width: 50px;
+     border-bottom: 2px solid orange; 
+     position: relative;
+     bottom: 15px;
+     right: 2px;
+}
+
+.test-full-box
+{
+     display: grid;
+     grid-template-columns: repeat(3 , 1fr);
+     gap: 20px;
+}
+
+.item-full-bocer img
+{
+     width: 50px;
+     float: left;
+     position: relative;
+     bottom: 30px;
+}
+
+.item-full-bocer div p
+{
+     margin: 10px 0px;
+     color: #999999;
+     text-align: justify;
+}
+
+.item-full-bocer h5
+{
+     margin: 8px;
+     color: #0c5f80;
+     text-decoration: none;
+}
+
+.texter
+{
+     width: 360px;
+     background-color: #fff;
+     padding: 12px;
+     margin-bottom: 10px;
+     box-shadow: 2px 2px 1px 0 #999999;
+}
+
+.Triangle
+{
+     width: 0;
+     height: 0;
+     border-left: 0px solid transparent;
+     border-right: 20px solid transparent;
+     border-top: 20px solid #fff;
+     position: relative;
+     bottom: 10px;
+     right: 300px;
 }
 
